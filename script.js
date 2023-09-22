@@ -4,12 +4,28 @@ let numCols = 0;
 let colorSelected; 
 
 // Add a row
-function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+function addR() 
+{
+    const grid=document.getElementById("grid");
+
+    const newRow=grid.insertRow();
+
+    for(let i=0;i<numCols;i++)
+    {
+        const cell=newRow.insertCell();
+        cell.onclick=function(){
+
+        };
+    }
+
+    numRows++;
+
+    
 }
 
 // Add a column
-function addC() {
+function addC() 
+{
     alert("Clicked Add Col"); // Replace this line with your code.
 }
 
