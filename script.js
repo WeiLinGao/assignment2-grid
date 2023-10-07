@@ -15,7 +15,7 @@ function addR()
         const cell=newRow.insertCell();
     }
 
-    numRows++;
+    
 
     
 }
