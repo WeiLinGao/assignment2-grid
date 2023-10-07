@@ -10,12 +10,14 @@ function addR()
 
     const newRow=grid.insertRow();
 
-    numRows++;
+    
 
     for(let i=0;i<numCols;i++)
     {
         const cell=newRow.insertCell();
     }
+
+    numRows++;
 
     
 
