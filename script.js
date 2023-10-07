@@ -13,9 +13,6 @@ function addR()
     for(let i=0;i<numCols;i++)
     {
         const cell=newRow.insertCell();
-        cell.onclick=function(){
-
-        };
     }
 
     numRows++;
@@ -26,23 +23,46 @@ function addR()
 // Add a column
 function addC() 
 {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    const grid=document.getElementById("grid");
+    numCols++;
+
+    for(let i=0;i<numRows;i++)
+    {
+        const row=grid.rows[i];
+        const cell=row.insertCell();
+    }
 }
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    const grid=document.getElementById("grid");
+
+    if(grid.rows.length>0)
+    {
+        grid.deleteRow(grid.rows.length-1);
+        numRows--;
+    }
 }
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    const grid=document.getElementById("grid");
+    if(numCols>0)
+    {
+        numCols--;
+        for(let i=0;i<numRows;i++)
+        {
+            const row=grid.rows[i];
+            row.deleteCell(numCols);
+        }
+    }
+
 }
 
 // Set global variable for selected color
 function selectColor(){
-    colorSelected = document.getElementById("selectedColorId").value;
-    console.log(colorSelected);
+    const 
+
 }
 
 // Fill all uncolored cells
@@ -57,5 +77,7 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    const grid=document.getElementById("grid");
+
+    grid.innerHTML= '';
 }
