@@ -7,7 +7,9 @@ let colorSelected;
 function addR() 
 {
     const grid=document.getElementById("grid");
+
     const newRow=grid.insertRow();
+
     for(let i=0;i<numCols;i++)
     {
         const cell=newRow.insertCell();
@@ -35,9 +37,9 @@ function addC()
 function removeR() {
     const grid=document.getElementById("grid");
 
-    if(grid.rows.length>0)
+    if(numRows>0)
     {
-        grid.deleteRow(grid.rows.length-1);
+        grid.deleteRow(numRows-1);
         numRows--;
     }
 }
@@ -58,29 +60,44 @@ function removeC() {
 }
 
 // Set global variable for selected color
-<<<<<<< HEAD
 function selectColor(){ 
-=======
-function selectColor(){
->>>>>>> af3794e9d04a5708c11829aa7cafadd85e7f2b53
-
+    const colorSelected=document.getElementById("selectedColorId").value;
+    console.log(colorSelected);
 }
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    selectColor();
+    const colorSelected=document.getElementById("selectedColorId").value;
+    const cells=document.querySelectorAll('td');
+    for(let i=0;i<cells.length;i++)
+    {
+        const cell=cells[i];
+        if(!cell.style.backgroundColor || cell.style.backgroundColor=='')
+        {
+            cell.style.backgroundColor=colorSelected;
+        }
+    }
 }
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    selectColor();
+    const colorSelected=document.getElementById("selectedColorId").value;
+    const cells=document.querySelectorAll('td');
+    for(let i=0;i<cells.length;i++)
+    {
+        const cell=cells[i];
+        cell.style.backgroundColor=colorSelected;
+    }
 }
 
 // Clear all cells
 function clearAll(){
-
     const grid=document.getElementById("grid");
 
     grid.innerHTML= '';
-}
 
+    numRows=0;
+    numCols=0;
+}
