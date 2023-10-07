@@ -58,7 +58,11 @@ function removeC() {
 }
 
 // Set global variable for selected color
+<<<<<<< HEAD
 function selectColor(){ 
+=======
+function selectColor(){
+>>>>>>> af3794e9d04a5708c11829aa7cafadd85e7f2b53
 
 }
 
