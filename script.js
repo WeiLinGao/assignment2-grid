@@ -7,9 +7,7 @@ let colorSelected;
 function addR() 
 {
     const grid=document.getElementById("grid");
-
     const newRow=grid.insertRow();
-
     for(let i=0;i<numCols;i++)
     {
         const cell=newRow.insertCell();
@@ -77,7 +75,9 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
+
     const grid=document.getElementById("grid");
 
     grid.innerHTML= '';
 }
+
