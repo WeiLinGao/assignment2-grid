@@ -31,7 +31,7 @@ function addC()
     for(let i=0;i<numRows;i++)
     {
         const row=grid.rows[i];
-        const cell=row.insertCell();
+        const cell=row.insertCell(-1);
     }
 }
 
