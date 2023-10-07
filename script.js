@@ -60,8 +60,7 @@ function removeC() {
 }
 
 // Set global variable for selected color
-function selectColor(){
-    const 
+function selectColor(){ 
 
 }
 
