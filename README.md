@@ -1,4 +1,4 @@
-#assignment1-zoo
+#assignment2- Grid Maker
 
 Group member:
 
