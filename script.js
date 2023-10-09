@@ -88,7 +88,7 @@ function fillU(){
         const cell=cells[i];
         if(!cell.style.backgroundColor || cell.style.backgroundColor=='')
         {
-            selectorColor(cell);
+            selectColor(cell);
         }
     }
 }
@@ -101,7 +101,7 @@ function fillAll(){
     for(let i=0;i<cells.length;i++)
     {
         const cell=cells[i];
-        selectorColor(cell);
+        selectColor(cell);
     }
 }
 
