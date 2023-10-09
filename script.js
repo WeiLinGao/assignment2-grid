@@ -16,7 +16,7 @@ function addR()
 
         cell.onclick=function()
         {
-            cell.style.backgroundColor=colorSelected;
+            selectColor(cell);
         };
                 
     }
@@ -41,7 +41,7 @@ function addC()
 
         cell.onclick=function()
         {
-            cell.style.backgroundColor=colorSelected;
+            selectColor(cell);
         };
     }
 }
