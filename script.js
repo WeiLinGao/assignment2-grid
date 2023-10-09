@@ -73,7 +73,7 @@ function removeC() {
 }
 
 // Set global variable for selected color
-function selectColor(){ 
+function selectColor(cell){ 
     const colorSelected=document.getElementById("selectedColorId").value;
     console.log(colorSelected);
 }
