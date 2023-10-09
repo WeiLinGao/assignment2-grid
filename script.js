@@ -17,7 +17,7 @@ function addR()
         cell.onclick=function()
         {
             cell.style.backgroundColor=colorSelected;
-        }
+        };
                 
     }
 
@@ -42,7 +42,7 @@ function addC()
         cell.onclick=function()
         {
             cell.style.backgroundColor=colorSelected;
-        }
+        };
     }
 }
 
