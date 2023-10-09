@@ -79,8 +79,8 @@ function selectColor(cell){
 }
 
 // Fill all uncolored cells
-function fillU(){
-    selectColor();
+function fillU()
+{
     const colorSelected=document.getElementById("selectedColorId").value;
     const cells=document.querySelectorAll('td');
     for(let i=0;i<cells.length;i++)
@@ -88,20 +88,20 @@ function fillU(){
         const cell=cells[i];
         if(!cell.style.backgroundColor || cell.style.backgroundColor=='')
         {
-            selectColor(cell);
+            selectColor(cell); // Pass the cell parameter to selectColor
         }
     }
 }
 
 // Fill all cells
-function fillAll(){
-    selectColor();
+function fillAll()
+{
     const colorSelected=document.getElementById("selectedColorId").value;
     const cells=document.querySelectorAll('td');
     for(let i=0;i<cells.length;i++)
     {
         const cell=cells[i];
-        selectColor(cell);
+        selectColor(cell); // Pass the cell parameter to selectColor
     }
 }
 
