@@ -13,6 +13,12 @@ function addR()
     for(let i=0;i<numCols;i++)
     {
         const cell=newRow.insertCell();
+
+        cell.onclick=function()
+        {
+            cell.style.backgroundColor=colorSelected;
+        }
+                
     }
 
     numRows++;
@@ -32,6 +38,11 @@ function addC()
     {
         const row=grid.rows[i];
         const cell=row.insertCell();
+
+        cell.onclick=function()
+        {
+            cell.style.backgroundColor=colorSelected;
+        }
     }
 }
 
