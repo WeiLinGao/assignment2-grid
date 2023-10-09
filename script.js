@@ -75,7 +75,7 @@ function removeC() {
 // Set global variable for selected color
 function selectColor(cell){ 
     const colorSelected=document.getElementById("selectedColorId").value;
-    cell.style.backgroudnColor=colorSelected;
+    cell.style.backgroundColor=colorSelected;
 }
 
 // Fill all uncolored cells
